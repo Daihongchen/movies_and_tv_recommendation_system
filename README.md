@@ -50,11 +50,11 @@ The data used in this project can be downloaded <a href="https://nijianmo.github
     25% movies have only one review.
     Data is sparse.
 
-![](4.png)
+<img src="images/4.png" width=800 /> ![](images/k8s-dashboard.png)
 
-![](3.png)
+<img src="images/3.png" width=800 /> ![](images/k8s-dashboard.png)
 
-![](2.png)
+<img src="images/2.png" width=800 /> ![](images/k8s-dashboard.png)
 
 
 ## Neural Networks Model
@@ -75,20 +75,20 @@ Model results:
 
 ### Final model Loss (loss function: Mean Squared Error)
 
-![](1.png)
+<img src="images/1.png" width=800 /> ![](images/k8s-dashboard.png)
 
 
 ### Base model Loss (loss function: Mean Squared Error)
 
 
 
-![](base_model.png)
+<img src="images/base_model.png" width=800 /> ![](images/k8s-dashboard.png)
 
 
 ### An exaple of the recommender
 
 
-![](example.png)
+<img src="images/example.png" width=800 /> ![](images/k8s-dashboard.png)
 
 
 ## Conclusion
