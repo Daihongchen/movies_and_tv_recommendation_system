@@ -27,6 +27,9 @@ from tensorflow.keras.layers import Embedding
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.regularizers import l2
 
+
+
+# Final model
 class EmbeddingLayer:
     def __init__(self, n_items, n_factors):
         self.n_items = n_items
