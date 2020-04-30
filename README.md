@@ -50,11 +50,12 @@ The data used in this project can be downloaded <a href="https://nijianmo.github
     25% movies have only one review.
     Data is sparse.
 
-<img src="images/4.png" width=800 /> ![](images/k8s-dashboard.png)
+<img src="images/4.png" width='800' /> ![](images/k8s-dashboard.png)
 
-<img src="images/3.png" width=800 /> ![](images/k8s-dashboard.png)
 
 <img src="images/2.png" width=800 /> ![](images/k8s-dashboard.png)
+
+<img src="images/3.png" width=6000 /> ![](images/k8s-dashboard.png)
 
 
 ## Neural Networks Model
