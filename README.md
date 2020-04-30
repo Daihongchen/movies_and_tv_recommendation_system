@@ -108,7 +108,7 @@ MAE decreased from 2.4 to 0.5
 ### An exaple of the recommender
 
 
-<img src="images/example.png" width=800 /> ![](images/k8s-dashboard.png)
+<img src="images/example1.png" width=800 /> ![](images/k8s-dashboard.png)
 
 
 ## Conclusion
