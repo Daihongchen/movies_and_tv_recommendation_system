@@ -32,11 +32,15 @@ By utilizing neural networks, the recommendation system would reach a high perfo
 
 The data used in this project can be downloaded <a href="https://nijianmo.github.io/amazon/index.html">HERE</a>
 
-    Json.gz file with 19 years data (8,765,568 reviews) 
-    Subsample to 2018 ratings/reviews (209,060 reviews)
-    Scrape review webpage link for each movie from the data
-    Drop unrelated variables
-
+    1. Json.gz file with 19 years data (8,765,568 reviews) 
+    2. Subsample to 2018 ratings/reviews (209,060 reviews)
+    3. Scrape review webpage link for each movie from the data
+    4. Drop unrelated variables
+    5. Preprocessed data features include: 'rating', 'reviewTime', 'reviewerID', 'movieID', 'style',
+       'reviewerName', 'reviewText', 'summary', 'unixReviewTime', 'vote',
+       'category', 'title', 'main_cat', 'description', 'brand', 'price',
+       'links', 'reviewer_count', 'movie_count', 'average_rating'
+  
 ## Process
 
 1. subsample
