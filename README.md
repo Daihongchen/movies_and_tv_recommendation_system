@@ -49,10 +49,10 @@ The data used in this project can be downloaded <a href="https://nijianmo.github
 
 ### Findings
 
-    Majority ratings are 5.
-    50% reviewers only reviewed 1 movie.
-    25% movies have only one review.
-    Data is sparse.
+1. Majority ratings are 5.
+2. 50% reviewers only reviewed 1 movie.
+3. 25% movies have only one review.
+4. Data is sparse.
 
 <img src="images/4.png" width='800' /> ![](images/k8s-dashboard.png)
 
