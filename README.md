@@ -69,9 +69,24 @@ Keras Embedding
 
 Metrics: MAE 
 
-Model results:
+## Model results: 
+MAE decreased from 2.4 to 0.5
 
-## MAE decreased from 2.4 to 0.5
+## Cross validation:
+    Metrics: Mean Absolute Error (MAE)
+    
+    StratifiedKFold, n_splits=5 
+    MAE for each fold:
+        0.398, 
+        0.402, 
+        0.399, 
+        0.399, 
+        0.399
+        
+    Average 0f MAE: 0.40
+    
+    Standard Deviation of MAE:  0.00131
+
 
 ### Final model Loss (loss function: Mean Squared Error)
 
