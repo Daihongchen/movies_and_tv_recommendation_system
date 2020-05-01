@@ -1,8 +1,9 @@
 from tensorflow.keras.models import load_model
 from sklearn.model_selection import StratifiedKFold
 import numpy
+import pandas as pd
 
-def corss_val(X, y):
+def cross_val(X_train_array, y_train):
     model_cv = load_model('../notebook/new_final_model.h5')
     kfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     cvscores = []

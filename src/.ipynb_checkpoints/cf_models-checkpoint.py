@@ -27,6 +27,9 @@ from tensorflow.keras.layers import Embedding
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.regularizers import l2
 
+
+
+# Final model
 class EmbeddingLayer:
     def __init__(self, n_items, n_factors):
         self.n_items = n_items
@@ -83,25 +86,26 @@ def RecommenderV4(n_reviewers, n_movies, n_factors):
     return model
 
 
-def train_test(data):
-    X = data[['reviewer','movie']].values
-    y = data['rating'].values
+def train_test(data_2018):
+    X = data_2018[['reviewer','movie']].values
+    y = data_2018['rating'].values
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=42)
     
     X_train_array = [X_train[:, 0], X_train[:, 1]]
     X_test_array = [X_test[:, 0], X_test[:, 1]]
     
-    return X_train_array, X_test_array, y_train, y_test
+    return X_train, X_test, X_train_array, X_test_array, y_train, y_test
 
 
 def create_parameters_model(data_2018):
+    n_reviewers = data_2018['reviewer'].nunique()
+    n_movies = data_2018['movie'].nunique()
+    n_factors = 50
+    min_rating = min(data_2018['rating'])
+    max_rating = max(data_2018['rating'])
+
     
-    n_reviewers = data['reviewer'].nunique()
-    n_movies = data['movie'].nunique()
-    min_rating = min(data['rating'])
-    max_rating = max(data'rating'])
-    
-    return n_reviewers, n_movies, min_rating, max_rating
+    return n_reviewers, n_movies, n_factors, min_rating, max_rating
     
     
 

@@ -94,7 +94,7 @@ def train_test(data_2018):
     X_train_array = [X_train[:, 0], X_train[:, 1]]
     X_test_array = [X_test[:, 0], X_test[:, 1]]
     
-    return X_train_array, X_test_array, y_train, y_test
+    return X_train, X_test, X_train_array, X_test_array, y_train, y_test
 
 
 def create_parameters_model(data_2018):
