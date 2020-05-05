@@ -48,8 +48,8 @@ The downloaded data files are Json.gz file. The files are unzipped  and processe
     1. Json.gz file with 19 years data (8,765,568 reviews) 
     2. This project only uses a subsample of 2018 ratings/reviews (209,060 reviews) because of computational cost.
     3. Scrape review webpage link for each movie from the data
-    4. Drop unrelated variables
-    5. Preprocessed data features include: 
+    4. Drop unrelated variables. Building a collaborative filtering model only requires three features of ratings, reviewerIDs, and movieIDs. Some related variables for deployment are alse selected. Others are dropped.
+    5. The variables in the preprocessed dataset include: 
     'rating', 'reviewTime', 'reviewerID', 'movieID', 'style',  'reviewerName',
     'reviewText', 'summary', 'unixReviewTime', 'vote', 'category', 'title', 'main_cat',
     'description', 'brand', 'price',  'links', 'reviewer_count', 'movie_count', 
@@ -86,18 +86,21 @@ The model applies deep learning keras embedding technique. Embedding is split on
  
 ### Base model:
 
-    1. Create the reviewer embeddings and movie embeddings as input layer.When create an Embedding layer, the weights for the embedding are randomly initialized (just like any other layer).
-    2. Uae Dot.product to merge two embeddings on reviewers and movies as output layer. 
+1. Create the reviewer embeddings and movie embeddings as input layer.When create an Embedding layer, the weights for the embedding are randomly initialized (just like any other layer).
+
+2. Uae Dot.product to merge two embeddings on reviewers and movies as output layer. 
     
 Base model did not perform well with the loss function of Squared Mean Error as 12, and the metrics, Mean Absolute Error as 2.4.
 
 ### Final Model:
 
-    1. Create the reviewer embeddings and movie embeddings as input layer.When create an Embedding layer, the weights for the embedding are randomly initialized (just like any other layer), and are gradually adjusted via backpropagation during training.
+1. Create the reviewer embeddings and movie embeddings as input layer.When create an Embedding layer, the weights for the embedding are randomly initialized (just like any other layer), and are gradually adjusted via backpropagation during training.
     
-    2. Use concatenate to merge embedding layers: It takes as input a list of tensors, all of the same shape except for the concatenation axis, and returns a single tensor, the concatenation of all inputs (https://keras.io/layers/merge/).
-    3. Add hidden layers. Hidden layers that better learn the underlying factors and representations to adjust the weights via backpropagation.
-    4. Add dropout to help with preventing overfitting on training dataset.
+2. Use concatenate to merge embedding layers: It takes as input a list of tensors, all of the same shape except for the concatenation axis, and returns a single tensor, the concatenation of all inputs (https://keras.io/layers/merge/).
+
+3. Add hidden layers. Hidden layers that better learn the underlying factors and representations to adjust the weights via backpropagation.
+
+4. Add dropout to help with preventing overfitting on training dataset.
 
 Final model performs very well with the loss function of Squared Mean Error as 0.78, and the metrics, Mean Absolute Error as 0.43.
 
