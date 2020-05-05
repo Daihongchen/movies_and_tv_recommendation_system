@@ -23,5 +23,6 @@ def recommender(test_value):
                             'description', 
                             'price', 
                             'links']].drop_duplicates()
+    recommend = recommend.round(1)
     
     return recommend
