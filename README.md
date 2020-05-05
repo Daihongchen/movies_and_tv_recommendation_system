@@ -28,10 +28,19 @@ By utilizing neural networks, the recommendation system would reach a high perfo
 
 ## Data
 
-The data used in this project can be downloaded <a href="https://nijianmo.github.io/amazon/index.html">HERE</a>. The Movies and TV reviews are one of the amazon products and you can click the reviews and metadata to download the data. The website requires the user to fill a form before allowing the download. Once you submit the form, the data will be downloaded immediately. 
+The data used in this project can be downloaded <a href="https://nijianmo.github.io/amazon/index.html">HERE</a>. The Movies and TV reviews are one of the amazon products and you can click the reviews and metadata to download the data. The website requires the user to fill a form before the download. Once you submit the form, the data will be downloaded immediately. 
+
 Movies and TV
+
 reviews (8,765,568 reviews)
+
 metadata (203,970 products)
+
+Or you can use the following codes for downloading the data:
+
+!wget http://deepyeti.ucsd.edu/jianmo/amazon/metaFiles/meta_Movies_and_TV.json.gz
+
+!wget http://deepyeti.ucsd.edu/jianmo/amazon/categoryFiles/Movies_and_TV.json.gz
 
 The downloaded data files are Json.gz file. The files are unzipped  and processed using the codes in the get_data.py file. The following are some keypoints about the data.
 
@@ -41,7 +50,10 @@ The downloaded data files are Json.gz file. The files are unzipped  and processe
     3. Scrape review webpage link for each movie from the data
     4. Drop unrelated variables
     5. Preprocessed data features include: 
-    'rating', 'reviewTime', 'reviewerID', 'movieID', 'style',  'reviewerName',   'reviewText', 'summary', 'unixReviewTime', 'vote', 'category', 'title', 'main_cat', 'description', 'brand', 'price',  'links', 'reviewer_count', 'movie_count', 'average_rating'
+    'rating', 'reviewTime', 'reviewerID', 'movieID', 'style',  'reviewerName',
+    'reviewText', 'summary', 'unixReviewTime', 'vote', 'category', 'title', 'main_cat',
+    'description', 'brand', 'price',  'links', 'reviewer_count', 'movie_count', 
+    'average_rating'
         
 ## Data Preparation and Exploration
 
