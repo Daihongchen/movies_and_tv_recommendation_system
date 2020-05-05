@@ -6,7 +6,7 @@ def recommender(test_value):
     ## pull the data for deploy
     file = '../data/data_2018_mr.csv'
     data_mr = pd.read_csv(file)
-    model_path = '../notebook/new_final_model.h5'
+    model_path = '../notebook/mr_model.h5'
     model_mr = load_model(model_path)
     movie_data = np.array(list(set(data_mr.movie)))
     user = np.array([test_value for i in range(len(movie_data))])

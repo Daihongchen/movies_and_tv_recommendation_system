@@ -27,13 +27,5 @@ def cross_val_v1(X_train, y_train):
 
     return cvscores, cvscore_mean, cvscore_std
 
-# def create_X_y():
-    
-#     file =  '../data/data_2018_mr.csv'
-#     data_2018 = pd.read_csv(file)
-    
-#     X = data_2018[['reviewer','movie']].values
-#     y = data_2018['rating'].values
-    
-#     return X, y
+
 
