@@ -46,7 +46,7 @@ The downloaded data files are Json.gz file. The files are unzipped  and processe
 
 
     1. Json.gz file with 19 years data (8,765,568 reviews) 
-    2. Subsample to 2018 ratings/reviews (209,060 reviews)
+    2. This project only uses a subsample of 2018 ratings/reviews (209,060 reviews) because of computational cost.
     3. Scrape review webpage link for each movie from the data
     4. Drop unrelated variables
     5. Preprocessed data features include: 
@@ -79,17 +79,33 @@ The downloaded data files are Json.gz file. The files are unzipped  and processe
 
 ## Neural Networks Model
 
-Collaborative Filtering
+The movie recommender was a Collaborative Filtering model with deep learning embedding technique. Collaborative filtering model is to use similarities of users to predict the movies/TV one user has not watched/purchased, but are highly interesting to this user. It is a model based recommender.
+
+The model applies deep learning keras embedding technique. Embedding is split one matrix into two smaller matrix, or transform high dimension to low dimensions. Embedding is one notable successful use of deep learning to represent discrete variables as continuous vectors. Embedding create a low dimensional space in which the movies that have been watched by a given user are nearby in the 'movie preference' space, and the users embeddings are closer to the movies that they have watched. These individual dimensions in these vectors typically have no inherent meaning. Instead, it’s the overall patterns of location and distance between vectors that machine learning takes advantage of. So that the model is able to recommend other movies based on those movies' proximity to a user embedding, because nearby users and movies share preferences.
+
  
-Keras Embedding
-    Create the reviewer embeddings and movie embeddings 
-        Discomposing the utility matrix 
-    Dot.product to merge two embeddings on reviewers and movies
-    Add hidden layers
+### Base model:
+
+    1. Create the reviewer embeddings and movie embeddings as input layer.When create an Embedding layer, the weights for the embedding are randomly initialized (just like any other layer).
+    2. Uae Dot.product to merge two embeddings on reviewers and movies as output layer. 
+    
+Base model did not perform well with the loss function of Squared Mean Error as 12, and the metrics, Mean Absolute Error as 2.4.
+
+### Final Model:
+
+    1. Create the reviewer embeddings and movie embeddings as input layer.When create an Embedding layer, the weights for the embedding are randomly initialized (just like any other layer), and are gradually adjusted via backpropagation during training.
+    
+    2. Use concatenate to merge embedding layers: It takes as input a list of tensors, all of the same shape except for the concatenation axis, and returns a single tensor, the concatenation of all inputs (https://keras.io/layers/merge/).
+    3. Add hidden layers. Hidden layers that better learn the underlying factors and representations to adjust the weights via backpropagation.
+    4. Add dropout to help with preventing overfitting on training dataset.
+
+Final model performs very well with the loss function of Squared Mean Error as 0.78, and the metrics, Mean Absolute Error as 0.43.
+
+
+## Model evaluation: 
 
 Metrics: MAE 
 
-### Model results: 
 The base model only includes input and output layers. Hidden layers and dropout(help with preventing overfitting) were added in the final model.
 
     The MAE of the base model is 2.4.
@@ -98,7 +114,7 @@ The base model only includes input and output layers. Hidden layers and dropout(
 
 Model performance was considerably good.
 
-## Cross validation:
+### Cross validation:
     Metrics: Mean Absolute Error (MAE)
     
     StratifiedKFold, n_splits=5 
@@ -138,3 +154,14 @@ Model performance was considerably good.
 Using neural networks in recommendation system improves the performance. This model could also transfer to other products. 
 
 The majority of the ratings are 5 starts, so the data is skewed. In the next steps, I will conduct a sentiment analysis on the reviews and use the sentiment score instead of ratings to build the model. Or combine the ratings and sentiment score as the new ratings to build the model to compare the performance. 
+
+
+sources:
+
+https://www.tensorflow.org/tutorials/text/word_embeddings
+
+https://keras.io/layers/merge/
+
+https://medium.com/spikelab/learning-embeddings-for-your-machine-learning-model-a6cb4bc6542e
+
+https://medium.com/@jdwittenauer/deep-learning-with-keras-recommender-systems-e7b99cb29929
