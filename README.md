@@ -1,4 +1,4 @@
-# Movie Recommender Using Deep Neural Networks
+# Movie Recommender Using Deep Neural Network
 
 This project applied keras embedding method and nueral networks to build a movies/TV recommender system with the data from Amazon reviews in 2018.
 
