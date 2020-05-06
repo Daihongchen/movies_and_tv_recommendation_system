@@ -11,25 +11,21 @@ daihongchen@icould.com
 
 ## Executive Summary
 
-The goal of this project is to build a high performance movies/TV recommender system to drive highly personalized marketing, engage Amazon customers, so as to boost the movies/TV products sales.
+The goal of the project is to build a high performance movies/TV recommender system to improve personalized marketing, to engage Amazon customers, so as to drive the movies/TV products sales at Amazon.
 
 Different from other products, online entertainment products such as movies and TV, are watched by users mostly from recommendations. A high performance recommendation system that could identify the latent features of the movies and the users, is able to better personalize the recommendaded movies that are most likely interesting to each user. It is a critical way to enhance personalized marketing, to egage users, so as to drive sales.
 
 Movie recommender using nueral networks has a few advantages compared to conventional approaches:
 
 1. It is well-established that neural networks are able to deal with complex interaction patterns and precisely reflect the user’s preference.
-
 2. Deep neural networks can efficiently learn the underlying explanatory factors and useful representations from input data.
-
 3. Neural Collaborative Filtering is a representative work that constructs a dual neural network to model this two-way interaction between users and items.
 
 By utilizing neural networks, the recommendation system would reach a high performance. In this study, the metrics used to evaluate the model performance is Mean Absolute Error. The final model was able to reach a Mean Absolute Error as low as 0.43. The corss validation on the training dataset validated the result with an average MAE of 0.39, and standard deviation of 0.012.
 
 Though model performance is relatively high from the perspective of academics, a more practical evaluation is tp conduct a AB test on the Amazon website and to investigate if the sales/revenues with the new recommender system would be significantly higher than the existing system.
 
-## Navigation of the Repo
-
-The repo includes:
+## Navigation of the Repository
 
 1. Folder - notebook, which contains four notebooks and the saved final model.
 
@@ -177,7 +173,7 @@ The base model only includes input and output layers. Hidden layers and dropout(
 
     The MAE of final model is 0.43.
 
-Model performance was considerably good compared MAE in conventional models which is aorund 0.7(<a href="https://doi.org/10.1016/j.eij.2016.10.002">citation</a>). It woule benefit Amazon's personalized marketing on movies/TV products.
+Model performance was considerably good compared MAE in conventional models which is aorund 0.7(<a href="https://doi.org/10.1016/j.eij.2016.10.002">citation</a>). It would help improve Amazon's personalized marketing on movies/TV products.
 
 ### Cross validation:
     Metrics: Mean Absolute Error (MAE)
