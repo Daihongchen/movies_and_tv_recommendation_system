@@ -25,7 +25,7 @@ Movie recommender using nueral networks has a few advantages compared to convent
 
 By utilizing neural networks, the recommendation system would reach a high performance. In this study, the metrics used to evaluate the model performance is Mean Absolute Error. The final model was able to reach a Mean Absolute Error as low as 0.43. The corss validation on the training dataset validated the result with an average MAE of 0.30, and standard deviation of 0.012.
 
-Though model performance is relatively high from the perspective of academics, a more practical evaluation is conducting a AB test on the Amazon website and investigate if the sales/watches with the recommender system would be significantly higher than the existing system. 
+Though model performance is relatively high from the perspective of academics, a more practical evaluation is conducting a AB test on the Amazon website and investigating if the sales/revenues with the recommender system would be significantly higher than the existing system.
 
 ## Navigation of the Repo
 
