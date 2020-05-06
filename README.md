@@ -33,15 +33,15 @@ The repo includes:
 
 1. Folder - notebook, which contains four notebooks and the saved final model.
 
-    a. final_report.ipynb is the final report notebook using source codes for audiences to read.
+    a. final_report.ipynb is the final report notebook using source code for audiences to read.
     
     b. mr_model.h5 is the saved final model that can be loaded to make predictions.
     
-    c. 01_create_subsample_2018.ipynb is the notebook that unzips, cleans, and subsamples the data.All code in this notebook were refactorized into source files.
+    c. 01_create_subsample_2018.ipynb is the notebook that unzips, cleans, and subsamples the data.All code in this notebook were refactorized into get_data.py source file.
     
-    d. 02_exploratory.ipynb is the notebook for exploration and visualization.All code in this notebook were refactorized into source files.
+    d. 02_exploratory.ipynb is the notebook for exploration and visualization.All code in this notebook were refactorized into explore.py source file.
     
-    e. 03_cf_model.ipynb shows the process of trying different models. The code for base model and final model were refactorized into source files.
+    e. 03_cf_model.ipynb shows the process of trying different models. The code for base model and final model were refactorized into cl_models.py source file.
 
 2. Folder - src, which contains source code for the final_report.ipynb
 
@@ -65,7 +65,7 @@ The repo includes:
     
         conda env create -f environment.yml
     
-6. Movie_Recommender_ppt.pdf, which is a pdf versin of the presentation of this project. Can be used as memo.    
+6. Movie_Recommender_ppt.pdf, which is a pdf versin of the presentation of this project. It also can be used as memo.    
 
 
   
