@@ -4,6 +4,8 @@ import gzip
 import pandas as pd
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
 
 def get_data():
 
@@ -46,7 +48,7 @@ def get_data():
     data_2018['links'] = links
 
     # clean the data and proprecessing for exploration and model building
-    data_2018 = data_2018.drop(['Unnamed: 0', 'verified', 'rank', 'also_buy', 'also_view', 'details'], axis=1)
+    data_2018 = data_2018.drop(['verified', 'rank', 'also_buy', 'also_view', 'details'], axis=1)
     data_2018 = data_2018.rename(columns={'overall':'rating', 'asin':'movieID'})
     reviewer_count = data_2018.groupby('reviewerID')['rating'].count()
     product_count = data_2018.groupby('movieID')['rating'].count()

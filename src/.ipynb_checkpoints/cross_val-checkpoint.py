@@ -4,7 +4,7 @@ import numpy
 import pandas as pd
 
 def cross_val_v1(X_train, y_train):
-    model_cv = load_model('../notebook/mr_model.h5')
+    model_cv = load_model('mr_model.h5')
     kfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     cvscores = []
     for train_index, test_index in kfold.split(X_train, y_train):
