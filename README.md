@@ -13,7 +13,7 @@ daihongchen@icould.com
 
 The goal of the project is to build a high performance movies/TV recommender system to improve personalized marketing, to engage Amazon customers, so as to drive the movies/TV products sales at Amazon.
 
-Different from other products, online entertainment products such as movies and TV, are watched by users mostly from recommendations. A high performance recommendation system that could identify the latent features of the movies and the users, is able to better personalize the recommendaded movies that are most likely interesting to each user. It is a critical way to enhance personalized marketing, to egage users, so as to drive sales.
+Different from other products, online entertainment products such as movies and TV, are watched/purchased  by users mostly from recommendations. A high performance recommendation system that could identify the latent features of the movies and the users, is able to better personalize the recommendaded movies that are most likely interesting to each user. It is a critical way to enhance personalized marketing, to egage users, so as to drive sales.
 
 Movie recommender using nueral networks has a few advantages compared to conventional approaches:
 
@@ -166,6 +166,8 @@ Final model performs very well with the loss function of Squared Mean Error as 0
 Metrics: Mean Absolute Error (MAE)
 
 Mean Absolute Error (MAE) measures the average magnitude of the errors in a set of predictions, without considering their direction. It’s the average over the test sample of the absolute differences between prediction and actual observation where all individual differences have equal weight. Due to the predicted value is the ratings ranging from 1 to 5, and being as 5 could be consider as good as 5 times of being as 1, and because there is no need to penalize the outliers, MAE is more appropriated, and easier to interpret. 
+
+For example, if a recommended movie is predicted as 5 for a given user, the esimated difference is about 0.4 from 5. 
 
 The base model only includes input and output layers. Hidden layers and dropout(help with preventing overfitting) were added in the final model.
 
