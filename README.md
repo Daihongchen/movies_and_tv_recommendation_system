@@ -177,7 +177,7 @@ The base model only includes input and output layers. Hidden layers and dropout(
 
     The MAE of final model is 0.43.
 
-Model performance was considerably good.
+Model performance was considerably good compared MAE in conventional models which is aorund 0.7(<a href="https://doi.org/10.1016/j.eij.2016.10.002">citation</a>). It woule benefit Amazon's personalized marketing on movies/TV products.
 
 ### Cross validation:
     Metrics: Mean Absolute Error (MAE)
@@ -236,3 +236,5 @@ https://medium.com/human-in-a-machine-world/mae-and-rmse-which-metric-is-better-
 https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file
 
 https://www.mckinsey.com/industries/retail/our-insights/how-retailers-can-keep-up-with-consumers
+
+https://doi.org/10.1016/j.eij.2016.10.002
