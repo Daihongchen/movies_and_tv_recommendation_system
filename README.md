@@ -110,15 +110,14 @@ Data preparation is used the source code in src.get_data.py.
 3. Scrape review webpage link for each movie from the variable-"details" using BeautifulSoup.
 4. Drop unrelated variables. Building a collaborative filtering model only requires three features of ratings, reviewerIDs, and movieIDs. Some related variables for deployment are also selected. Others are dropped.
 5. The variables in the preprocessed dataset are: 
-    'rating', 'reviewTime', 'reviewerID', 'movieID', 'style',  'reviewerName',
-    'reviewText', 'summary', 'unixReviewTime', 'vote', 'category', 'title', 'main_cat',
-    'description', 'brand', 'price',  'links', 'reviewer_count', 'movie_count', 
-    'average_rating'. 
 
-#### Data exploration
-Explore and visualize the data using the source code in src.explore.py
+        'rating', 'reviewTime', 'reviewerID', 'movieID', 'style',  'reviewerName',
+        'reviewText', 'summary', 'unixReviewTime', 'vote', 'category', 'title',
+        'main_cat', 'description', 'brand', 'price',  'links', 'reviewer_count',
+        'movie_count', 'average_rating'. 
 
-### Findings
+#### Data exploration and findings
+Explore and visualize the data using the source code in src.explore.py.
 
 1. Majority ratings are 5.
 2. 50% reviewers only reviewed 1 movie.
@@ -164,7 +163,7 @@ Base model did not perform well with the loss function of Squared Mean Error as 
 Final model performs very well with the loss function of Squared Mean Error as 0.78, and the metrics, Mean Absolute Error as 0.43.
 
 
-## Model evaluation: 
+## Model Evaluation: 
 
 Metrics: Mean Absolute Error (MAE)
 
