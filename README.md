@@ -13,7 +13,7 @@ daihongchen@icould.com
 
 The project goal is to build a high performance movies/TV recommender system to engage Amazon customers, so as to drive the movies/TV products sales.
 
-Different from other products, online entertainment products such as movies and TV, are watched by users mostly from recommendations. A high performance recommendation system that could identify the latent features of the movies and the users, so as to better personalize the recommendaded movies that are most likely interesting to each user. It is very important to attract and egage users, so as to drive sales.
+Different from other products, online entertainment products such as movies and TV, are watched by users mostly from recommendations. A high performance recommendation system that could identify the latent features of the movies and the users, is able to better personalize the recommendaded movies that are most likely interesting to each user. It is a critical way to enhance personalized marketing, to egage users, so as to drive sales.
 
 Movie recommender using nueral networks has a few advantages compared to conventional approaches:
 
@@ -135,7 +135,7 @@ Explore and visualize the data using the source code in src.explore.py.
 
 ## Model Understanding
 
-### Neural Collaborative Filtering Model
+### Neural Collaborative Filtering Model and Why
 
 The movie recommender was a Collaborative Filtering model with deep learning embedding technique. Collaborative filtering model uses similarities of users' preferences to predict the movies/TV that a given user has not watched/purchased, but are highly interesting to this user. It is a model based recommender.
 
