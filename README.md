@@ -167,7 +167,7 @@ Metrics: Mean Absolute Error (MAE)
 
 Mean Absolute Error (MAE) measures the average magnitude of the errors in a set of predictions, without considering their direction. It’s the average over the test sample of the absolute differences between prediction and actual observation where all individual differences have equal weight. Due to the predicted value is the ratings ranging from 1 to 5, and being as 5 could be consider as good as 5 times of being as 1, and because there is no need to penalize the outliers, MAE is more appropriated, and easier to interpret. 
 
-For example, if a recommended movie is predicted as 5 for a given user, the esimated difference is about 0.4 from 5. 
+For example, if the model predicts 3 to a movie for a given user, this means that on average the true rating is between 2.6 and 3.4
 
 The base model only includes input and output layers. Hidden layers and dropout(help with preventing overfitting) were added in the final model.
 
