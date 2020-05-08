@@ -2,7 +2,7 @@
 
 This project applied keras embedding method and nueral networks to build a movies/TV recommender system with the data from Amazon reviews in 2018.
 
-I also built an app built upon the model developed in this project as below. 
+I also built an app to demo the model developed in this project. 
 
 <A href='https://movie-recommender-max.herokuapp.com/'>Max-Your-Movie-Recommender</a>
 
