@@ -2,7 +2,7 @@
 
 This project applied keras embedding method and nueral networks to build a movies/TV recommender system with the data from Amazon reviews in 2018.
 
-Please click here to check out the demo of the movie recommender app built upon the model developed in this project, and Flask.
+Please click blow to check out the demo of the movie recommender app built upon the model developed in this project, and Flask.
 
 <A href='https://movie-recommender-max.herokuapp.com/'>Max-Your-Movie-Recommender</a>
 
