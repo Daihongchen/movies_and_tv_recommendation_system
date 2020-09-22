@@ -20,7 +20,7 @@ daihongchen@icould.com
 
 The goal of the project is to build a high performance movies/TV recommender system to improve personalized marketing, to engage Amazon customers, so as to drive the movies/TV products sales at Amazon.
 
-Different from other products, online entertainment products such as movies and TV, are watched/purchased  by users mostly from recommendations. A high performance recommendation system that could identify the latent features of the movies and the users, is able to better personalize the recommendaded movies that are most likely interesting to each user. It is a critical way to enhance personalized marketing, to egage users, so as to drive sales.
+Different from other products, online entertainment products such as movies and TV, are watched/purchased  by users mostly from recommendations. A high performance recommendation system that could identify the latent features of the movies and the users, is able to better personalize the recommended movies that are most likely interesting to each user. It is a critical way to enhance personalized marketing, to engage users, so as to drive sales.
 
 Movie recommender using nueral networks has a few advantages compared to conventional approaches:
 
